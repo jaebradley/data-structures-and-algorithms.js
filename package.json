@@ -1,0 +1,27 @@
+{
+  "name": "@jaebradley/data-structures",
+  "private": true,
+  "version": "0.0.0-development",
+  "engines": {
+    "node": "10.14.1",
+    "npm": "6.4.1"
+  },
+  "description": "Just some data structures, implemented by me",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaebradley/data-structures.git"
+  },
+  "author": "jae.b.bradley@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaebradley/data-structures/issues"
+  },
+  "homepage": "https://github.com/jaebradley/data-structures#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
