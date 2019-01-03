@@ -31,12 +31,6 @@ describe('MinHeap', function() {
 
   describe('#add', function() {
     describe('when empty', function() {
-      it('value is first value', function() {
-        var heap = MinHeap();
-        heap.add(1);
-        expect(heap.getFirst()).toBe(1);
-      });
-
       describe('add smaller value', function() {
         it('smaller value is first value', function() {
           var heap = MinHeap();
@@ -47,11 +41,19 @@ describe('MinHeap', function() {
       });
 
       describe('add larger value', function() {
-        it('initial value is first value', function() {
+        it('smaller value is first value', function() {
           var heap = MinHeap();
           heap.add(1);
           heap.add(2);
           expect(heap.getFirst()).toBe(1);
+        });
+
+        describe('add smallest value', function() {
+          var heap = MinHeap();
+          heap.add(1);
+          heap.add(2);
+          heap.add(0);
+          expect(heap.getFirst()).toBe(0);
         });
       });
     });
@@ -83,7 +85,7 @@ describe('MinHeap', function() {
         });
       });
 
-      describe('when five values exist', function() {
+      describe('when ten values exist', function() {
         it('removes values in order', function() {
           var heap = MinHeap();
           heap.add(1);

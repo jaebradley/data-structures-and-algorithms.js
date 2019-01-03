@@ -62,9 +62,7 @@ var MinHeap = function() {
   function remove() {
     var firstValue = values[1],
         lastValueIndex = values.length - 1,
-        lastValue = values[lastValueIndex];
-
-    values.splice(lastValueIndex, 1);
+        lastValue = values.splice(lastValueIndex, 1)[0];
 
     if (getSize() > 0) {
       values[1] = lastValue;
