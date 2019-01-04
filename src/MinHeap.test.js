@@ -85,30 +85,18 @@ describe('MinHeap', function() {
         });
       });
 
-      describe('when ten values exist', function() {
+      describe('when many values exist', function() {
         it('removes values in order', function() {
-          var heap = MinHeap();
-          heap.add(1);
-          heap.add(10);
-          heap.add(2);
-          heap.add(9);
-          heap.add(3);
-          heap.add(8);
-          heap.add(4);
-          heap.add(7);
-          heap.add(5);
-          heap.add(6);
+          var i,
+              values = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6],
+              heap = MinHeap();
+          for (i = 0; i < values.length; i += 1) {
+            heap.add(values[i]);
+          }
 
-          expect(heap.remove()).toBe(1);
-          expect(heap.remove()).toBe(2);
-          expect(heap.remove()).toBe(3);
-          expect(heap.remove()).toBe(4);
-          expect(heap.remove()).toBe(5);
-          expect(heap.remove()).toBe(6);
-          expect(heap.remove()).toBe(7);
-          expect(heap.remove()).toBe(8);
-          expect(heap.remove()).toBe(9);
-          expect(heap.remove()).toBe(10);
+          for (i = 0; i < values.length; i += 1) {
+            expect(heap.remove()).toBe(i + 1);
+          }
         });
       })
     });

@@ -15,10 +15,9 @@ var MinHeap = function() {
   }
 
   function swap(firstIndex, secondIndex) {
-    var firstValue = values[firstIndex],
-        secondValue = values[secondIndex];
+    var firstValue = values[firstIndex];
 
-    values[firstIndex] = secondValue;
+    values[firstIndex] = values[secondIndex];
     values[secondIndex] = firstValue;
   }
 
