@@ -11,6 +11,7 @@
  * Once the for loop has completed, swap the first index + 1 value (the first value greater than the pivot) with the pivot
  * Return the pivot.
  * Recursively sort from start to pivot index - 1 and pivot index + 1 to end index
+ * Runtime: Worst-case (for sorted lists) is O(n^2). Average runtime is O(n * log n)
  */
 
 function quicksort(values) {
